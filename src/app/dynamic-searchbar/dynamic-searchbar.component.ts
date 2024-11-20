@@ -10,8 +10,7 @@ export class DynamicSearchbarComponent {
  dynamicValues=["Home Loan","Agri Loan","Vehicle Loan","Personal Loan"]
 animationValues:string=''
 i:number=0
-@ViewChild('mySearchbar', { static: false }) mySearchbar!: ElementRef;
-  constructor(private renderer: Renderer2) {
+  constructor() {
     setInterval(()=>{
     this.i++
     this.animationValues=this.dynamicValues[this.i-1]
@@ -20,13 +19,5 @@ i:number=0
   }
   },2000)
    }
-
-   onSearchbarFocus() {
-    this.renderer.setStyle(this.mySearchbar.nativeElement, 'opacity', '1');
-  }
-
-  onSearchbarBlur() {
-    console.log('Searchbar lost focus!');
-  }
 
 }

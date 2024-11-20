@@ -5,27 +5,32 @@
     top: 50px;
     padding: 20px;
 }
-.searchbar{
-    opacity: 0.5;
-    height: 50px;
+ion-searchbar{
     z-index: 1;
+    opacity: 0.5;
+    --border-radius: 20px;
+    --placeholder-opacity: 0;
 }
-
+ion-searchbar:focus-within {
+    opacity: 1; 
+    --placeholder-opacity: 0;
+    --border-radius: 20px;
+  }
 .placeholdercontent{
     position: absolute;
     display: flex;
     align-items: center;
-    left: 124px;
-    top:31px;
-    height: 30px;
-    overflow: hidden; 
+    left: 84px;
+    top:34px;
+    height: 27px;
+    overflow: hidden;   
 }
 .dynamiccontent{
    
     position: relative;
     width: 200px;
-    left: 50px;
-    animation: dynamictext 2s linear infinite;
+    left: 10px;
+    animation: dynamictext 2s infinite ;
     
 }
 
@@ -35,11 +40,11 @@ ion-searchbar input::placeholder {
   }
   
 @keyframes dynamictext{
-    0%{transform:translateY(200%);}
+    0%{transform:translateY(100%);}
 
     50%{transform:translateY(0%);}
  
     70%{transform:translateY(0%);}
  
-    100%{transform:translateY(-200%);}
+    100%{transform:translateY(-100%);}
 }

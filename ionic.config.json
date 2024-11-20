@@ -1,5 +1,7 @@
 {
   "name": "dynamicsearchbar",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
